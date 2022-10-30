@@ -4,6 +4,7 @@ import { initiateGetProfile } from './profile';
 import { history } from '../router/AppRouter';
 import { getErrors } from './error';
 import { setAuthHeader, removeAuthHeader } from '../utils/common';
+import { resetAccount} from './account';
 
 export const signIn = (user) => ({
   type: SIGN_IN,
@@ -53,6 +54,7 @@ export const initiateLogout = () => {
       await axios.post(`${BASE_API_URL}/logout`);
       removeAuthHeader();
       localStorage.removeItem('user_token');
+      dispatch(resetAccount());
       return dispatch(signOut());
     } catch (error) {
       error.response && dispatch(getErrors(error.response.data));

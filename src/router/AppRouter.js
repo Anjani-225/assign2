@@ -8,7 +8,7 @@ import Register from '../components/Register';
 import Profile from '../components/Profile';
 import Header from '../components/Header';
 import Logout from '../components/Logout';
-
+import Account from '../components/Account';
 export const history = createBrowserHistory();
 
 const AppRouter = ({ auth }) => {
@@ -22,6 +22,7 @@ const AppRouter = ({ auth }) => {
             <Route path="/register" component={Register} />
             <Route path="/profile" component={Profile} />
             <Route path="/logout" component={Logout} />
+            <Route path="/account" component={Account} />
           </Switch>
         </div>
       </div>
