@@ -1,0 +1,7 @@
+Write a simple payments system’s backend with a language of your choice and RDBMS of your choice, containing the following functionality: 
+HTTP REST APIs to be provided to access the system’s functionality following RESTful practices. 
+There should be a functionality to create new users by collecting their bank account details, name and age, keeping their bank account number as a primary identifier to do further operations for that user. Also add a base balance amount for this user. 
+The user should be able to create a CREDIT/DEBIT payment transaction of an amount to another user in this system creating a ledger of some sort. 
+There should be a functionality to check the total balance amount for a given user account number. 
+There should be a functionality to check the passbook (a list of all transactions done by a user) which lists all transactions (paginated). Each transaction row should contain the amount, source (From-User) (all details of this user), target (To-User) (All details of this user). 
+ Make sure that appropriate database normalisation techniques are used while modelling the database schema. Also provide an API contract for this (endpoint details, request body, etc).
